@@ -1,0 +1,106 @@
+body, html {
+  height: 100%;
+  margin: 0;
+}
+
+.page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  margin-left: 10px;
+}
+
+img {
+  opacity: 0;
+  animation: fadeInAndRotate 2s ease-in-out forwards;
+}
+
+h1 {
+  opacity: 0;
+  animation: fadeIn 2s ease-in-out forwards;
+  font-family: Arial, sans-serif;
+  font-size: 60px;
+  font-weight: normal;
+}
+
+#telegramIcon {
+  width: 53px;
+  margin-top: 800%;
+  margin-left: -450%;
+  opacity: 0;
+  animation: fadeIn 2s ease-in-out forwards;
+}
+
+#vkIcon {
+  width: 50px;
+  margin-top: 850%;
+  margin-left: -440%;
+  opacity: 0;
+  animation: fadeIn 2s ease-in-out forwards;
+}
+
+#githubIcon {
+  width: 50px;
+  margin-top: 850%;
+  margin-left: -400%;
+  opacity: 0;
+  animation: fadeIn 2s ease-in-out forwards;
+}
+
+@keyframes fadeInAndRotate {
+  0% {
+    opacity: 0;
+    transform: translateY(-50px) rotate(0deg);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0) rotate(360deg);
+  }
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.button-container {
+    display: flex;
+    justify-content: space-between;
+}
+
+.button {
+    display: inline-block;
+    padding: 10px 20px;
+    border: none;
+    text-align: center;
+    text-decoration: none;
+    font-size: 14px;
+    font-family: Arial;
+    cursor: pointer;
+    border-radius: 100px;
+    margin-top: 600px;
+    margin-left: 10px;
+    height: 40px;
+    width: 60px;
+    line-height: 40px;
+}
+
+.button a:hover {
+    color: white;
+    text-decoration: none;
+}
+
+.btn-primary {
+    background-color: #4dc190;
+    color: white;
+}
+
+.btn:hover {
+    background-color: #4dc190;
+}
