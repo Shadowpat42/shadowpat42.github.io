@@ -65,3 +65,26 @@ h1 {
 .section p {
     text-align: justify;
 }
+
+nav {
+    display: flex;
+    justify-content: flex-end;
+    background-color: #f8f8f8;
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+}
+
+nav a {
+    color: #000000;
+    text-decoration: none;
+    margin-left: 20px;
+    font-size: 16px;
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
+
+nav a {
+    border-bottom: none; /* Убираем нижнюю границу у ссылок */
+}
