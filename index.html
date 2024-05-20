@@ -3,61 +3,24 @@
 <head>
     <meta charset="UTF-8">
     <title>Shadowpat site</title>
-    <link rel="stylesheet" href="style.css">
-    <style>
-        body {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            height: 80vh;
-            margin: 0;
-        }
-
-        .page {
-            text-align: center;
-        }
-
-        #myImage {
-            margin-top: 27%;
-            margin-left: -10px; /* Регулируйте это значение по вашему усмотрению */
-            width: 200px;
-            height: auto;
-            opacity: 0;
-            animation: fadeInAndRotate 2s ease-in-out forwards;
-        }
-
-        h1 {
-            opacity: 0;
-            animation: fadeIn 2s ease-in-out forwards;
-            font-family: Arial, sans-serif;
-            font-size: 50px;
-            font-weight: 500;
-        }
-    </style>
+    <link rel="stylesheet" href="styles/style.css">
 </head>
 <body>
     <div class="page">
-        <div class="text-wrapper">
-            <img id="myImage" src="icons/Icon-192-round.png" alt="">
-            <h1>Shadowpat</h1>
+        <img id="myImage" src="icons/Icon-192-round.png" alt="Icon">
+        <h1>Shadowpat</h1>
+        <div class="button-icon-container">
+            <div class="icon-links">
+                <a href="https://t.me/shadowpat42" target="_blank"><img src="icons/telegram.png" alt="Telegram"></a>
+                <a href="https://vk.com/shadowpat" target="_blank"><img src="icons/vk.svg" alt="VK"></a>
+                <a href="https://github.com/Shadowpat42" target="_blank"><img src="icons/github.jpg" alt="GitHub"></a>
+            </div>
+            <div class="button-container">
+                <div class="button"><b>Resume</b></div>
+                <div class="button"><b>Skills</b></div>
+                <div class="button"><b>Projects</b></div>
+            </div>
         </div>
     </div>
-    <h1><a href="https://t.me/shadowpat42" target="_blank"><img id="telegramIcon" src="icons/telegram.png" alt=""></a></h1>
-    <h1><a href="https://vk.com/shadowpat" target="_blank"><img id="vkIcon" src="icons/vk.jpg" alt=""></a></h1>
-    <h1><a href="https://github.com/Shadowpat42" target="_blank"><img id="githubIcon" src="icons/github.jpg" alt=""></a></h1>
-    <div style="margin-left: -450px; margin-bottom: 40px">
-        <div class="button btn btn-primary">
-            <a><b>Resume</b></a>
-        </div>
-
-        <div class="button btn btn-primary">
-            <a><b>Skills</b></a>
-        </div>
-
-        <div class="button btn btn-primary">
-            <a><b>Projects</b></a>
-        </div>
-    </div>
-
 </body>
 </html>

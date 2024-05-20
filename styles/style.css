@@ -1,0 +1,96 @@
+body, html {
+    height: 100%;
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+.page {
+    text-align: center;
+}
+
+#myImage {
+    width: 200px;
+    height: auto;
+    opacity: 0;
+    animation: fadeInAndRotate 2s ease-in-out forwards;
+}
+
+h1 {
+    opacity: 0;
+    animation: fadeIn 2s ease-in-out forwards;
+    font-size: 50px;
+    font-weight: 500;
+    margin: 10px 0;  /* уменьшение отступов */
+}
+
+.button-icon-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;  /* уменьшение отступов */
+}
+
+.icon-links {
+    margin: 10px 0;  /* уменьшение отступов */
+}
+
+.icon-links img {
+    width: 50px;
+    margin: 0 10px;
+    opacity: 0;
+    animation: fadeIn 2s ease-in-out forwards;
+}
+
+.button-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;  /* уменьшение отступов */
+}
+
+.button {
+    display: inline-block;
+    padding: 10px 20px;
+    border: none;
+    text-align: center;
+    text-decoration: none;
+    font-size: 14px;
+    cursor: pointer;
+    border-radius: 50px;
+    margin: 0 10px;
+    height: 40px;
+    line-height: 40px;
+    background-color: #4dc190;
+    color: white;
+    transition: background-color 0.3s;
+}
+
+.button:hover {
+    background-color: #3ca378;
+}
+
+@keyframes fadeInAndRotate {
+    0% {
+        opacity: 0;
+        transform: translateY(-50px) rotate(0deg);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0) rotate(360deg);
+    }
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
