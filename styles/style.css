@@ -1,96 +1,107 @@
-body, html {
-    height: 100%;
-    margin: 0;
-    font-family: Arial, sans-serif;
+:root{
+  --bg:#0a0c10;
+  --panel:#0f1216;
+  --ink:#e8eef2;
+  --muted:#a6b0bb;
+  --accent:#4dc190;
+  --stroke:#1d2128;
 }
 
-body {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 100vh;
+*{ box-sizing:border-box }
+
+html, body{
+  height:100%;
+  margin:0;
+  font-family:Inter, system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+  background: radial-gradient(1200px 400px at 10% -10%, rgba(77,193,144,.08), transparent 60%), linear-gradient(180deg, #0a0c10 0%, #0f1116 100%);
+  color:var(--ink);
 }
 
-.page {
-    text-align: center;
+.page{
+  min-height:100%;
+  display:flex; flex-direction:column;
+  align-items:center; justify-content:center;
+  padding:24px 16px;
 }
 
-#myImage {
-    width: 200px;
-    height: auto;
-    opacity: 0;
-    animation: fadeInAndRotate 2s ease-in-out forwards;
+.site-header{
+  text-align:center;
+  animation: fadeUp .8s ease-out 0s both;
 }
 
-h1 {
-    opacity: 0;
-    animation: fadeIn 2s ease-in-out forwards;
-    font-size: 50px;
-    font-weight: 500;
-    margin: 10px 0;  /* уменьшение отступов */
+.brand{
+  display:flex; align-items:center; gap:14px; justify-content:center;
+  margin:0;
+  font-size:34px; letter-spacing:.3px;
+}
+.brand img{
+  opacity:0; transform:translateY(10px) scale(.95);
+  animation: reveal .9s ease-out .05s both;
+  border-radius:16px; box-shadow:0 10px 30px rgba(0,0,0,.35);
+}
+.brand span{
+  background: linear-gradient(90deg, #e8eef2, #a6b0bb);
+  -webkit-background-clip:text; background-clip:text; color:transparent;
 }
 
-.button-icon-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin-top: 20px;  /* уменьшение отступов */
+.tagline{
+  margin:8px 0 0; color:var(--muted); font-weight:500;
+  letter-spacing:.4px; animation: fadeUp .9s ease-out .05s both;
 }
 
-.icon-links {
-    margin: 10px 0;  /* уменьшение отступов */
+.main{
+  display:flex; flex-direction:column; align-items:center; gap:18px;
+  margin-top:22px;
 }
 
-.icon-links img {
-    width: 50px;
-    margin: 0 10px;
-    opacity: 0;
-    animation: fadeIn 2s ease-in-out forwards;
+.links{
+  display:flex; gap:12px; flex-wrap:wrap; justify-content:center;
 }
 
-.button-container {
-    display: flex;
-    justify-content: center;
-    margin-top: 10px;  /* уменьшение отступов */
+.btn{
+  display:inline-flex; align-items:center; justify-content:center;
+  min-width:140px; padding:10px 16px;
+  border-radius:12px; text-decoration:none; color:#0c1116;
+  background: var(--accent);
+  font-weight:600; letter-spacing:.2px;
+  border:1px solid rgba(0,0,0,.15);
+  transition: transform .15s ease, box-shadow .15s ease, background .2s ease;
+  box-shadow: 0 6px 18px rgba(77,193,144,.25);
+}
+.btn:hover{ transform: translateY(-2px); box-shadow: 0 10px 26px rgba(77,193,144,.32) }
+.btn:active{ transform: translateY(0) scale(.98) }
+
+.social{
+  display:flex; gap:14px; list-style:none; margin:6px 0 0; padding:0;
+}
+.social a{
+  display:inline-flex; width:40px; height:40px; align-items:center; justify-content:center;
+  border-radius:10px; border:1px solid var(--stroke);
+  background:#111317;
+  transition: background .2s ease, transform .15s ease, border-color .2s ease;
+}
+.social a:hover{ background:#151922; transform:translateY(-2px); border-color:#1f2630 }
+.social img{ width:22px; height:22px; filter: grayscale(15%) contrast(105%) }
+
+.site-footer{
+  position:fixed; bottom:16px; left:0; right:0; text-align:center; color:var(--muted);
 }
 
-.button {
-    display: inline-block;
-    padding: 10px 20px;
-    border: none;
-    text-align: center;
-    text-decoration: none;
-    font-size: 14px;
-    cursor: pointer;
-    border-radius: 50px;
-    margin: 0 10px;
-    height: 40px;
-    line-height: 40px;
-    background-color: #4dc190;
-    color: white;
-    transition: background-color 0.3s;
+/* Animations */
+@keyframes reveal{
+  to{ opacity:1; transform:translateY(0) scale(1) }
+}
+@keyframes fadeUp{
+  from{ opacity:0; transform:translateY(12px) }
+  to{ opacity:1; transform:translateY(0) }
 }
 
-.button:hover {
-    background-color: #3ca378;
+/* Reduced motion */
+@media (prefers-reduced-motion: reduce){
+  *{ animation: none !important; transition: none !important }
 }
 
-@keyframes fadeInAndRotate {
-    0% {
-        opacity: 0;
-        transform: translateY(-50px) rotate(0deg);
-    }
-    100% {
-        opacity: 1;
-        transform: translateY(0) rotate(360deg);
-    }
-}
-
-@keyframes fadeIn {
-    0% {
-        opacity: 0;
-    }
-    100% {
-        opacity: 1;
-    }
+/* Responsive */
+@media (min-width:768px){
+  .brand{ font-size:40px }
 }

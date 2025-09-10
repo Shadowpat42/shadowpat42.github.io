@@ -1,73 +1,113 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-    <meta charset="UTF-8">
-    <title>Резюме - Владимир</title>
-    <link rel="stylesheet" href="../styles/resume.css">
+  <meta charset="UTF-8">
+  <title>Резюме — Владимир Джобиров</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- Шрифты -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../styles/resume.css">
 </head>
 <body>
-<div class="resume-container">
-    <nav>
-        <a href="../index.html">Home</a>
-        <a href="projects.html">Projects</a>
-        <a href="resume.html">Resume</a>
-        <a href="skills.html">Skills</a>
-    </nav>
-    <h1 style="color: black;">Vladimir Dzhobirov</h1>
-    <div class="contact-info">
-        <p>Email: <a href="mailto:shadowpat@rambler.ru">shadowpat@rambler.ru</a></p>
-        <p>Телефон: +7 900 048 4823</p>
-        <p>GitHub: <a href="https://github.com/Shadowpat42" target="_blank">github.com/Shadowpat42</a></p>
-        <p>Город: Екатеринбург, Россия</p>
-    </div>
+<header class="site-header">
+  <nav class="nav">
+    <a href="../index.html" class="nav__link">Home</a>
+    <a href="resume.html" class="nav__link nav__link--active">Resume</a>
+    <a href="skills.html" class="nav__link">Skills</a>
+  </nav>
+</header>
 
-    <div class="section">
-        <h2>Образование</h2>
-        <ul>
-            <li>
-                <span>Уральский Федеральный Университет (УрФУ)</span><br>
-                Бакалавр, Информатика и вычислительная техника<br>
-                2023 - 2027
-            </li>
-        </ul>
+<main class="resume">
+  <section class="hero">
+    <div class="hero__name">
+      <h1>Vladimir Dzhobirov</h1>
+      <p class="hero__subtitle">Python/Backend · Преподаватель информатики</p>
     </div>
+    <ul class="contacts">
+      <li><span class="label">Email:</span> <a href="mailto:shadowpat@rambler.ru">shadowpat@rambler.ru</a></li>
+      <li><span class="label">Телефон:</span> <a href="tel:+79000484823">+7 900 048 4823</a></li>
+      <li><span class="label">GitHub:</span> <a href="https://github.com/Shadowpat42" target="_blank" rel="noopener">github.com/Shadowpat42</a></li>
+      <li><span class="label">Город:</span> Екатеринбург, Россия</li>
+    </ul>
+  </section>
 
-    <div class="section">
-        <h2>Навыки</h2>
-        <ul>
-            <li>Языки программирования: Python, C#</li>
-            <li>Веб-технологии: HTML, CSS, WordPress</li>
-            <li>Фреймворки: RenPy, Flask, Django</li>
-            <li>Базы данных: MySQL, SQLite, PostgreSQL</li>
-            <li>Инструменты: Git, Vagrant</li>
-        </ul>
-    </div>
+  <section class="section">
+    <h2>Обо мне</h2>
+    <p>
+      20‑летний преподаватель информатики и наставник по Python. Помогаю ученикам осваивать базовые конструкции
+      и практики кодирования через задачи и разбор ошибок. Фокус: чистый код, структурированное мышление,
+      разбор алгоритмов на примерах, постепенное усложнение. Работаю с начинающими и студентами первых курсов,
+      даю понятные чек‑листы и домашние задания, связываю теорию с практикой веб‑и бэкенд‑разработки [2][6].
+    </p>
+  </section>
 
-    <div class="section">
-        <h2>Опыт работы</h2>
-        <p>Пока что нет опыта работы.</p>
-    </div>
+  <section class="section">
+    <h2>Опыт</h2>
+    <article class="card">
+      <div class="card__head">
+        <h3>Онлайн‑репетитор (Python, информатика)</h3>
+        <span class="card__meta">Profi.ru · Remote · 2024 — наст. время</span>
+      </div>
+      <ul class="list">
+        <li>Подготовка программ и материалов: базовый Python (переменные, ввод/вывод, ветвления, циклы), разбор задач и мини‑проектов [6].</li>
+        <li>Индивидуальные планы: диагностика пробелов, постановка целей, контроль прогресса через чек‑листы и тесты [6].</li>
+        <li>Улучшение результатов учеников: рост успеваемости и решение задач ЕГЭ‑уровня на тему алгоритмов и структуры данных начального уровня [6].</li>
+        <li>Инструменты: онлайн‑доска, GitHub, Python/VS Code, тестовые тетради, автопроверка задач [2].</li>
+      </ul>
+    </article>
+  </section>
 
-    <div class="section">
-        <h2>Обо мне</h2>
-        <p>Мне 18 лет, я студент Университета Уральский Федеральный Университет (УрФУ). По большей части работаю бекендом,
-            имею опыт работы с различными языками программирования и фреймворками. Люблю решать сложные задачи и
-            постоянно стремлюсь к профессиональному развитию.</p>
+  <section class="section">
+    <h2>Навыки</h2>
+    <div class="skills-grid">
+      <div class="chip-group">
+        <div class="chip chip--title">Языки</div>
+        <div class="chip">Python</div>
+        <div class="chip">Java</div>
+        <div class="chip">C#</div>
+      </div>
+      <div class="chip-group">
+        <div class="chip chip--title">Веб</div>
+        <div class="chip">HTML</div>
+        <div class="chip">CSS</div>
+        <div class="chip">WordPress</div>
+      </div>
+      <div class="chip-group">
+        <div class="chip chip--title">Фреймворки</div>
+        <div class="chip">Flask</div>
+        <div class="chip">Django</div>
+        <div class="chip">Ren’Py</div>
+      </div>
+      <div class="chip-group">
+        <div class="chip chip--title">БД</div>
+        <div class="chip">PostgreSQL</div>
+        <div class="chip">MySQL</div>
+        <div class="chip">SQLite</div>
+      </div>
+      <div class="chip-group">
+        <div class="chip chip--title">Инструменты</div>
+        <div class="chip">Git</div>
+        <div class="chip">Vagrant</div>
+        <div class="chip">GitHub</div>
+      </div>
     </div>
+  </section>
 
-    <div class="section">
-        <h2>Проекты</h2>
-        <ul>
-            <li>
-                <span>Проект 1</span><br>
-                Описание проекта 1. Что было сделано, какие технологии использованы.
-            </li>
-            <li>
-                <span>Проект 2</span><br>
-                Описание проекта 2. Что было сделано, какие технологии использованы.
-            </li>
-        </ul>
-    </div>
-</div>
+  <section class="section">
+    <h2>Образование</h2>
+    <article class="card">
+      <div class="card__head">
+        <h3>Уральский Федеральный Университет (УрФУ)</h3>
+        <span class="card__meta">Бакалавр, Информатика и вычислительная техника · 2023 — 2027</span>
+      </div>
+    </article>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <span>© Vladimir Dzhobirov</span>
+</footer>
 </body>
 </html>

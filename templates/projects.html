@@ -1,44 +1,109 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 <head>
-    <meta charset="UTF-8">
-    <title>Projects - Vladimir Dzhobirov</title>
-    <link rel="stylesheet" href="../styles/projects.css">
+  <meta charset="UTF-8">
+  <title>Projects — Vladimir Dzhobirov</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- Шрифт -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../styles/projects.css">
 </head>
 <body>
-    <div class="projects-container">
-        <nav>
-            <a href="../index.html">Home</a>
-            <a href="projects.html">Projects</a>
-            <a href="resume.html">Resume</a>
-            <!-- not used -->
-            <a href="skills.html">Skills</a>
-        </nav>
-        <h1>Projects</h1>
-        <div class="projects-grid">
-            <div class="project-card">
-                <a href="https://github.com/Shadowpat42/flask-project" target="_blank">
-                    <img src="../images/flask_photo.jpg" alt="Project Image">
-                    <h2>VibeSocial</h2>
-                    <p>Проект на фреймворке Flask, представляющий собой социальную платформу!</p>
-                </a>
+  <div class="projects">
+    <header class="site-header">
+      <nav class="nav">
+        <a href="../index.html" class="nav__link">Home</a>
+        <a href="projects.html" class="nav__link nav__link--active">Projects</a>
+        <a href="resume.html" class="nav__link">Resume</a>
+        <a href="skills.html" class="nav__link">Skills</a>
+      </nav>
+    </header>
+
+    <main class="container">
+      <h1 class="title">Проекты</h1>
+      <p class="subtitle">Подборка учебных и практических работ: веб, бэкенд и визуальные новеллы.</p>
+
+      <section class="grid">
+        <!-- Flask -->
+        <article class="card">
+          <a class="card__link" href="https://github.com/Shadowpat42/flask-project" target="_blank" rel="noopener">
+            <div class="thumb" style="background-image:url('../images/flask_photo.jpg')"></div>
+            <div class="card__body">
+              <h2 class="card__title">VibeSocial</h2>
+              <p class="card__text">Социальная платформа на Flask: аутентификация, профили, посты, CRUD, шаблоны Jinja, деплой на Linux.</p>
+              <div class="tags">
+                <span class="tag">Flask</span>
+                <span class="tag">Python</span>
+                <span class="tag">PostgreSQL</span>
+                <span class="tag">Jinja</span>
+              </div>
             </div>
-            <div class="project-card">
-                <a href="https://github.com/Shadowpat42/digital-portfolio" target="_blank">
-                    <img src="../images/portfolio_photo.jpg" alt="Project Image">
-                    <h2>Digital portfolio: bright.kind.website</h2>
-                    <p>Сайт, представляющий собой личное портфолио заказчика!</p>
-                </a>
+          </a>
+        </article>
+
+        <!-- Django (вузовский практикум) -->
+        <article class="card">
+          <a class="card__link" href="https://github.com/Shadowpat42/digital-portfolio" target="_blank" rel="noopener">
+            <div class="thumb" style="background-image:url('../images/portfolio_photo.jpg')"></div>
+            <div class="card__body">
+              <h2 class="card__title">Digital portfolio</h2>
+              <p class="card__text">Личный сайт‑портфолио заказчика: Django + HTML/CSS/JS, админка, модели, формы, деплой, документация по контенту.</p>
+              <div class="tags">
+                <span class="tag">Django</span>
+                <span class="tag">Python</span>
+                <span class="tag">HTML</span>
+                <span class="tag">CSS</span>
+                <span class="tag">JavaScript</span>
+              </div>
             </div>
-            <div class="project-card">
-                <a href="https://github.com/Shadowpat42/Dark_Throne-Freezing_Hopes" target="_blank">
-                    <img src="../images/freezing_hopes.jpg" alt="Project Image">
-                    <h2>RenPy: Freezing hopes!</h2>
-                    <p>Визуальная новелла, погружающая пользователя в жизнь обычного абитуриента!</p>
-                </a>
+          </a>
+        </article>
+
+        <!-- Ren'Py -->
+        <article class="card">
+          <a class="card__link" href="https://github.com/Shadowpat42/Dark_Throne-Freezing_Hopes" target="_blank" rel="noopener">
+            <div class="thumb" style="background-image:url('../images/freezing_hopes.jpg')"></div>
+            <div class="card__body">
+              <h2 class="card__title">Freezing Hopes</h2>
+              <p class="card__text">Визуальная новелла на Ren’Py: ветвления сюжета, состояния, ресурсы, сборка билдов для Win/Linux.</p>
+              <div class="tags">
+                <span class="tag">Ren’Py</span>
+                <span class="tag">Python</span>
+                <span class="tag">Assets</span>
+              </div>
             </div>
-            <!-- Add more projects as needed :)-->
-        </div>
+          </a>
+        </article>
+
+          <!-- Moodle Analytics Plugin -->
+<article class="card">
+  <a class="card__link" href="#" target="_blank" rel="noopener">
+    <div class="thumb" style="background-image:url('../images/moodle.jpg  ')"></div>
+    <div class="card__body">
+      <h2 class="card__title">Moodle Analytics Plugin</h2>
+      <p class="card__text">
+        Плагин для Moodle: сбор статистики активности пользователей и курсов, агрегированные метрики и удобные
+        дашборды с фильтрами по периодам и группам. Экспорт отчетов.
+      </p>
+      <div class="tags">
+        <span class="tag">Moodle</span>
+        <span class="tag">PHP</span>
+        <span class="tag">PostgreSQL</span>
+        <span class="tag">Analytics</span>
+        <span class="tag">Charts</span>
+      </div>
     </div>
+  </a>
+</article>
+
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <span>© Vladimir Dzhobirov</span>
+    </footer>
+  </div>
 </body>
 </html>

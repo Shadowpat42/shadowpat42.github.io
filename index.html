@@ -1,26 +1,47 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 <head>
-    <meta charset="UTF-8">
-    <title>Shadowpat site</title>
-    <link rel="stylesheet" href="styles/style.css">
+  <meta charset="UTF-8">
+  <title>Shadowpat — Vladimir Dzhobirov</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles/style.css">
 </head>
 <body>
-    <div class="page">
-        <img id="myImage" src="icons/Icon-192-round.png" alt="Icon">
-        <h1>Shadowpat</h1>
-        <div class="button-icon-container">
-            <div class="icon-links">
-                <a href="https://t.me/shadowpat42" target="_blank"><img src="icons/telegram.png" alt="Telegram"></a>
-                <a href="https://vk.com/shadowpat" target="_blank"><img src="icons/vk.svg" alt="VK"></a>
-                <a href="https://github.com/Shadowpat42" target="_blank"><img src="icons/github.jpg" alt="GitHub"></a>
-            </div>
-            <div class="button-container">
-                <a href="/templates/resume.html" class="button"><b>Resume</b></a>
-                <a href="/templates/projects.html" class="button"><b>Projects</b></a>
-                <div class="button"><b>Skills</b></div>
-            </div>
-        </div>
-    </div>
+  <div class="page">
+    <header class="site-header" role="banner">
+      <h1 class="brand">
+        <img id="myImage" src="icons/Icon-192-round.png" alt="Shadowpat logo" width="96" height="96" loading="eager">
+        <span>Shadowpat</span>
+      </h1>
+      <p class="tagline">Python • Backend • Tutoring</p>
+    </header>
+
+    <main class="main" role="main">
+      <nav class="links" aria-label="Primary">
+        <a class="btn" href="/templates/resume.html"><span>Resume</span></a>
+        <a class="btn" href="/templates/projects.html"><span>Projects</span></a>
+        <a class="btn" href="/templates/skills.html"><span>Skills</span></a>
+      </nav>
+
+      <ul class="social" aria-label="Social links">
+        <li><a href="https://t.me/shadowpat42" target="_blank" rel="noopener" aria-label="Telegram">
+          <img src="icons/telegram.png" alt="" width="28" height="28"></a></li>
+        <li><a href="https://vk.com/shadowpat" target="_blank" rel="noopener" aria-label="VK">
+          <img src="icons/vk.svg" alt="" width="28" height="28"></a></li>
+        <li><a href="https://github.com/Shadowpat42" target="_blank" rel="noopener" aria-label="GitHub">
+          <img src="icons/github.jpg" alt="" width="28" height="28"></a></li>
+      </ul>
+    </main>
+
+    <footer class="site-footer">
+      <small>© Vladimir Dzhobirov</small>
+    </footer>
+  </div>
+
+  <script src="app.js" defer></script>
 </body>
 </html>
